@@ -9,10 +9,20 @@
 <body>
     <div class="container">
         <h1>Weather App</h1>
-        <input type="text" id="cityInput" placeholder="Enter city name">
-        <button id="getWeatherBtn">Get Weather</button>
-        <div id="weatherInfo">
-            <!-- Weather information will be displayed here -->
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button id="getWeatherBtn">Get Weather</button>
+        </div>
+        <div id="weatherInfo" class="hidden">
+            <h2>Current Weather</h2>
+            <div class="weatherDetail" id="city"></div>
+            <div class="weatherDetail" id="temperature"></div>
+            <div class="weatherDetail" id="description"></div>
+            <div class="weatherDetail" id="humidity"></div>
+            <div class="weatherDetail" id="windSpeed"></div>
+            <div class="weatherDetail" id="airQuality"></div>
+            <h2>Forecast</h2>
+            <div id="forecast" class="forecast-container"></div>
         </div>
     </div>
     <script src="script.js"></script>
