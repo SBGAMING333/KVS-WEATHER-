@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
 }
 
@@ -13,7 +13,20 @@ body {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
+    width: 400px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 #cityInput {
@@ -22,25 +35,60 @@ body {
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    outline: none;
 }
 
 #getWeatherBtn {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #2193b0;
+    background-color: #6dd5ed;
     color: #fff;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #getWeatherBtn:hover {
-    background-color: #6dd5ed;
+    background-color: #2193b0;
 }
 
 #weatherInfo {
     margin-top: 20px;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .weatherDetail {
     margin: 10px 0;
+    animation: zoomIn 0.6s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.forecastItem {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    margin: 10px 0;
+    animation: popUp 0.8s ease;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
