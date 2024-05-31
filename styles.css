@@ -17,4 +17,30 @@ body {
 }
 
 #cityInput {
-    padding: 10px⬤
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#getWeatherBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2193b0;
+    color: #fff;
+    cursor: pointer;
+}
+
+#getWeatherBtn:hover {
+    background-color: #6dd5ed;
+}
+
+#weatherInfo {
+    margin-top: 20px;
+}
+
+.weatherDetail {
+    margin: 10px 0;
+}
